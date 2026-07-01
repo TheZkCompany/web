@@ -70,19 +70,6 @@
                 overflow: hidden;
             }
 
-            /* faint radial lift behind the mark — background only, mark untouched */
-            body::before {
-                content: "";
-                position: fixed;
-                inset: 0;
-                background: radial-gradient(
-                    60% 55% at 50% 38%,
-                    rgba(244, 243, 239, 0.06),
-                    transparent 70%
-                );
-                pointer-events: none;
-            }
-
             main {
                 position: relative;
                 display: flex;
@@ -95,7 +82,7 @@
             }
 
             .mark {
-                width: clamp(84px, 16vmin, 132px);
+                width: clamp(68px, 12vmin, 104px);
                 height: auto;
                 overflow: visible;
             }
@@ -131,7 +118,7 @@
             h1 {
                 font-family: var(--sans);
                 font-weight: 600;
-                font-size: clamp(2rem, 7.2vw, 3.5rem);
+                font-size: clamp(1.6rem, 5.6vw, 2.7rem);
                 line-height: 1.02;
                 letter-spacing: -0.02em;
                 color: var(--paper);
