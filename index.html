@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>The ZK Company.</title>
+        <title>The ZK Company</title>
         <meta
             name="description"
             content="The ZK Company — proving systems for a private, verifiable web. Research, executed in the open: zero-knowledge proofs, zkML, and recursion."
@@ -192,6 +192,27 @@
                 outline-offset: 3px;
             }
 
+            /* ---------- notes & blogs ---------- */
+            .writing {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: clamp(8px, 1.6vmin, 14px);
+            }
+            .writing .eyebrow {
+                margin-bottom: clamp(2px, 0.6vmin, 6px);
+            }
+            .notes {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: clamp(8px, 2vmin, 18px);
+            }
+            .notes .dot {
+                color: var(--graphite);
+            }
+
             /* ---------- entrance choreography: the proof radiates in ---------- */
             @keyframes draw {
                 to {
@@ -282,6 +303,9 @@
             .gh.reveal {
                 animation-delay: 2.28s;
             }
+            .writing.reveal {
+                animation-delay: 2.42s;
+            }
 
             @media (prefers-reduced-motion: reduce) {
                 .mark .diamond,
@@ -346,6 +370,31 @@
             >
                 Github<span class="arrow" aria-hidden="true">↗</span>
             </a>
+
+            <section class="writing reveal" aria-label="Notes and blogs">
+                <p class="eyebrow">Notes &amp; Blogs</p>
+                <p class="notes">
+                    <a
+                        class="gh"
+                        href="https://www.ocdbyt.es/blogs/rings"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Rings<span class="arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <span class="dot">·</span>
+                    <a
+                        class="gh"
+                        href="https://www.ocdbyt.es/blogs/vector-spaces"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Vector Spaces<span class="arrow" aria-hidden="true"
+                            >↗</span
+                        >
+                    </a>
+                </p>
+            </section>
         </main>
     </body>
 </html>
